@@ -1,0 +1,31 @@
+<p>test works!</p>
+<!-- here ngform is directive and here angular is tracking value of form in json format above form -->
+<!-- whatever we type in text boxes we got it into person form(json) object -->
+<form #personForm="ngForm">
+    {{personForm.value |json}}
+    <br>
+    {{person|json}}
+<table>
+    <tr>
+        <td><label>Id</label></td>
+        <td><input [(ngModel)]="person.id" name="txtId"></td>
+    </tr>
+    <tr>
+        <td><label>Name</label></td>
+        <td><input [(ngModel)]="person.name" name="txtName"></td>
+    </tr>
+    <tr>
+        <td><label>Salary</label></td>
+        <td><input [(ngModel)]="person.salary" name="txtSalary"></td>
+    </tr>
+    <tr>
+        <td><label>Grade</label></td>
+        <td><input [(ngModel)]="person.grade" name="txtGrade"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="printInput()">ADD</button>
+        </td>
+    </tr>
+</table>
+</form>
