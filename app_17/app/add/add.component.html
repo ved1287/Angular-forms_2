@@ -1,0 +1,25 @@
+<p>add works!</p>
+{{stdForm.value|json}}<br>
+<form [formGroup]="stdForm">
+    <table>
+        <tr>
+            <td><label>RollNo</label></td>
+            <td><input formControlName="rollno"></td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input formControlName="name"></td>
+        </tr>
+        <tr>
+            <td><label>Age</label></td>
+            <td><input formControlName="age"></td>
+        </tr>
+        <tr>
+            <td><label>City</label></td>
+            <td><input formControlName="city"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" (click)="add()">ADD</button></td>
+        </tr>
+    </table>
+</form>
