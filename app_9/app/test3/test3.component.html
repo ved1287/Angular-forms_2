@@ -1,0 +1,25 @@
+<p>test3 works!</p>
+<!-- when we want to display an array of data or we have a collection of data and if we want to display 
+in template then we have to use ngFor directives -->
+<ul>
+    <li *ngFor="let n of names;index as i;last as l">{{l}}-{{i+1}}-{{n}}</li>
+    <!-- <li *ngFor="let n of names">{{n}}</li>
+    in first iteration ved is stored in n and display in second iteration hema is stored in n and display -->
+</ul>
+<table border="1">
+    <tr *ngFor="let t of technologies;index as i">
+        <td >{{i+1}}</td>
+        <td >{{t}}</td>
+       
+    </tr>
+</table><br>
+<table border="1">
+    <tr *ngFor="let e of employees;index as i;even as e" [ngStyle]="e?titleStyles:titleStyles1">
+        
+        <td>{{i+1}}</td>
+        <td >{{e.id}}</td>
+        <td >{{e.name}}</td>
+        <td >{{e.salary}}</td>
+        <td ><ul><li *ngFor="let s of e.skills">{{s}}</li></ul></td>
+    </tr>
+</table>

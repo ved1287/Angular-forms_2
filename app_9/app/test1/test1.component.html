@@ -1,0 +1,24 @@
+<p>test1 works!</p>
+<!-- directive is of two types structural and non structural .the directives start with *symbol is called
+structural directives. -->
+<h1 *ngIf="displayMessage">Hello Angular</h1>
+<h1 *ngIf="displayMessage;else elseBlock">Hello Angular 2</h1>
+<ng-template #elseBlock>
+    <h2>
+        Message is Hidden
+    </h2>
+</ng-template>
+<div *ngIf="displayName; then thenBlock; else elseBlock1"></div>
+
+<ng-template #thenBlock>
+    <h2>
+        Hello Angular 3
+    </h2>
+</ng-template>
+<ng-template #elseBlock1>
+    <h2>
+        Hello Angular 3 is Hidden
+    </h2>
+</ng-template>
+<input type="checkbox" [(ngModel)]="displayName">Show Message<br>
+<input type="checkbox" [(ngModel)]="displayMessage">Show Message1
