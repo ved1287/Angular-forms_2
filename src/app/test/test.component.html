@@ -1,0 +1,35 @@
+<p>test works!</p>
+{{personForm.value|json}}
+<form [formGroup]="personForm">
+    <table>
+        <tr>
+            <td><label>ID</label></td>
+            <td>
+                <input formControlName="idControl">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td>
+                <input formControlName="nameControl">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Salary</label></td>
+            <td>
+                <input formControlName="salaryControl">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Grade</label></td>
+            <td>
+                <input formControlName="gradeControl">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="printInput()">ADD</button>
+            </td>
+        </tr>
+    </table>
+</form>
