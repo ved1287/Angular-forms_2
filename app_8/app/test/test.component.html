@@ -1,0 +1,24 @@
+<p>test works!</p>
+<!-- pipes symbol I is used for some transformation -->
+{{name | lowercase}}<br>
+{{name | uppercase}}<br>
+{{name | titlecase}}<br>
+{{name | slice:3:6}}<br>
+{{person | json}}
+
+{{5.678 | number:'1.2-3'}}<br>
+{{5.678 | number:'3.4-5'}}<br>
+{{5.678 | number:'3.1-2'}}<br>
+
+<hr>
+{{0.25 | percent}}<br>
+{{0.25 | currency}}<br>
+{{0.25 | currency:'GBP'}}<br>
+<hr>
+{{today}}<br>
+{{today |date:'short'}}<br>
+{{today |date:'shortDate'}}<br>
+{{today |date:'shortTime'}}<br>
+
+
+
