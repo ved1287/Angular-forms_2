@@ -1,0 +1,23 @@
+<p>test1 works!</p>
+<form [formGroup]="categoryForm">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <input formControlName="categoryname">
+            <div style="color:red;" *ngIf="categoryForm.get('categoryname').touched && categoryForm.get('categoryname').invalid && categoryForm.get('categoryname').errors?.minlength">Name should be min of 5 characters length</div>
+            <div style="color:red;" *ngIf="categoryForm.get('categoryname').touched && categoryForm.get('categoryname').invalid && categoryForm.get('categoryname').errors?.maxlength">Name should be max of 15 characters length</div>
+        </tr>
+        <tr>
+            <td><label>Description</label></td>
+            <input formControlName="categorydesc">
+           
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="Add()">Add</button>
+            </td>
+        </tr>
+    </table>
+</form>
+{{categoryResponse |json}}
+
